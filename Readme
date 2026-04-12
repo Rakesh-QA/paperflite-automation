@@ -1,0 +1,84 @@
+Paperflite Automation Framework (Selenium + Java)
+
+Overview
+
+This project automates the end-to-end flow of Paperflite:
+
+* Login
+* Create Collection
+* Upload Assets
+* Generate Link
+* Apply Gating (Email + Password)
+* Validate in Incognito (Fliteview)
+* Validate in Conversations
+* Delete Conversation & Collection
+
+---
+
+Tech Stack
+
+* Java
+* Selenium WebDriver
+* TestNG
+* Maven
+* Robot Class (File Upload)
+
+---
+
+Project Structure
+
+src
+ ├── main
+ ├── test
+ │   ├── java
+ │   │   ├── pages
+ │   │   ├── tests
+ │   │   ├── utils
+ │   ├── resources
+ │       ├── Files
+ │       ├── Data (testdata.csv)
+```
+
+
+
+▶️ How to Run
+
+1. Clone the project
+2. Open in Eclipse 
+3. Run:
+
+mvn clean test
+
+
+---
+
+📊 Test Data (CSV)
+
+```
+collectionName,email,password,file1,file2,file3,file4
+Auto_Collection_01,testuser@gmail.com,Test@123,Files/file1.pdf,Files/file2.pdf,Files/file3.pdf,Files/file4.pdf
+```
+
+---
+Key Challenges Solved
+
+* File upload using Robot class
+* Handling dynamic UI (React-based)
+* Duplicate DOM elements (carousel issue)
+* Flaky click handling (retry + JS click)
+* Incognito browser validation
+
+---
+
+Improvements
+
+* Replace Robot with input[type='file']
+* Add Extent Reports
+* Parallel execution
+
+---
+
+Author
+
+Rakesh
+QA Automation Engineer
