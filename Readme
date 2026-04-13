@@ -49,8 +49,24 @@ src
 
 mvn clean test
 
+▶️ Test Execution
 
----
+Run using Maven
+
+Run from IDE (Eclipse / IntelliJ)
+
+1. Navigate to:
+
+src/test/java/tests/E2ETest.java
+
+2. Right click on:
+
+E2ETest.java
+
+3. Click:
+
+Run As → TestNG Test
+```
 
 📊 Test Data (CSV)
 
