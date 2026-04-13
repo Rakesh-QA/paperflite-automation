@@ -106,21 +106,6 @@ public class CollectionPage {
 
         wait.until(ExpectedConditions.elementToBeClickable(confirmBtn)).click();
     }
-    public void safeClick(By locator) {
-
-        WebElement element = wait.until(ExpectedConditions.presenceOfElementLocated(locator));
-
-        try {
-            wait.until(ExpectedConditions.elementToBeClickable(locator)).click();
-        } catch (Exception e) {
-
-            ((JavascriptExecutor) driver)
-                    .executeScript("arguments[0].scrollIntoView(true);", element);
-
-            ((JavascriptExecutor) driver)
-                    .executeScript("arguments[0].click();", element);
-        }
-    }
 
 
 }

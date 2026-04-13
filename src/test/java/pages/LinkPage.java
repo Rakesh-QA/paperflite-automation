@@ -49,7 +49,7 @@ public class LinkPage {
 
         wait.until(ExpectedConditions.elementToBeClickable(getLink)).click();
 
-        //  Handle optional popup safely
+      
         List<WebElement> popup = driver.findElements(popupClose);
 
         if (popup.size() > 0) {
@@ -58,8 +58,6 @@ public class LinkPage {
             } catch (Exception e) {
                 System.out.println("Popup present but not clickable");
             }
-        } else {
-            System.out.println("Popup not present");
         }
     }
 
@@ -108,35 +106,33 @@ public class LinkPage {
     	    .executeScript("arguments[0].click();", emailToggle);
 
 
-    	// ✅ Password toggle (STABLE FIX)
+    	// Password toggle (
     	WebElement passwordToggle = wait.until(
     	    ExpectedConditions.presenceOfElementLocated(By.id("password"))
     	);
 
-    	// Scroll into view (important)
+    	// Scroll into view
     	((JavascriptExecutor) driver)
     	    .executeScript("arguments[0].scrollIntoView({block:'center'});", passwordToggle);
 
-    	// Small wait for UI stabilization
     	Thread.sleep(500);
 
-    	// Force click
     	((JavascriptExecutor) driver)
     	    .executeScript("arguments[0].click();", passwordToggle);
 
 
-    	// ✅ Save (without password)
+    	// Save (without password)
     	wait.until(ExpectedConditions.elementToBeClickable(saveBtn)).click();
 
     	eremsg = wait.until(
     	    ExpectedConditions.visibilityOfElementLocated(errorMsg)
     	).getText();
 
-    	// ✅ Enter password
+    	// Enter password
     	wait.until(ExpectedConditions.visibilityOfElementLocated(enterPassword))
     	    .sendKeys(password);
 
-    	// ✅ Save again
+    	// Save again
     	wait.until(ExpectedConditions.elementToBeClickable(saveBtn)).click();
     	
     }
