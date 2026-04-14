@@ -75,25 +75,6 @@ collectionName,email,password,file1,file2,file3,file4
 Auto_Collection_01,testuser@gmail.com,Test@123,Files/file1.pdf,Files/file2.pdf,Files/file3.pdf,Files/file4.pdf
 ```
 
----
-Key Challenges Solved
-
-* File upload using Robot class
-* Handling dynamic UI (React-based)
-* Duplicate DOM elements (carousel issue)
-* Flaky click handling (retry + JS click)
-* Incognito browser validation
-
----
-
-Improvements
-
-* Replace Robot with input[type='file']
-* Add Extent Reports
-* Parallel execution
-
----
-
 Author
 
 Rakesh
